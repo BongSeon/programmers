@@ -13,8 +13,8 @@ function solution(n, lost, reserve) {
   })
 
   loster.forEach((wanner) => {
-    const findOrder = [0, -1, 1]
-    for (let i = 0; i <= 2; i++) {
+    const findOrder = [-1, 1] // [0, -1, 1]
+    for (let i = 0; i <= 1; i++) {
       if (set.has(wanner + findOrder[i])) {
         set.delete(wanner + findOrder[i])
         console.log(`${wanner}는 체육복 ${wanner + findOrder[i]}를 입었다`)
